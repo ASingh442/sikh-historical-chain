@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    /* Core Settings */
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "ESNext",
@@ -14,28 +13,17 @@
     "skipLibCheck": true,
     "strict": true,
     "incremental": true,
-
-    /* ✅ Path and Base Config */
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
       "@/lib/*": ["lib/*"]
     },
-
-    /* Next.js Plugin */
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "src",
-    "components",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["next-env.d.ts", "src", "components", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", ".next"]
 }
