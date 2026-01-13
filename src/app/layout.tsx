@@ -1,24 +1,18 @@
-"use client";
+import type React from "react"
+import { Suspense } from "react"
+import { Inter, Playfair_Display } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+import { Navigation } from "@/components/navigation"
+import { AppProviders } from "@/providers/AppProviders"
 
-import React, { Suspense } from "react";
-import { Inter, Playfair_Display } from "next/font/google";
-import { GeistMono } from "geist/font/mono";
-import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
-import { Navigation } from "@/components/navigation";
-import { AppProviders } from "@/providers/AppProviders";
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" })
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" });
-
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`font-sans ${inter.variable} ${playfair.variable} ${GeistMono.variable} antialiased`}
-      >
+      <body className={`font-sans ${inter.variable} ${playfair.variable} antialiased`}>
         <AppProviders>
           <div className="min-h-screen bg-gradient-light relative overflow-hidden">
             <div className="fixed inset-0 opacity-[0.03] pointer-events-none">
@@ -39,7 +33,7 @@ export default function RootLayout({
             <footer className="relative z-10 border-t border-border/50 mt-20">
               <div className="container mx-auto px-4 py-8">
                 <p className="text-center text-muted-foreground text-sm">
-                  Built with Faith ✦ Guided by Light ✦ Preserving the Eternal Word
+                  Every Record Immutable ✦ Every Update Traceable ✦ Every Truth Protected from Corruption
                 </p>
               </div>
             </footer>
@@ -48,5 +42,5 @@ export default function RootLayout({
         </AppProviders>
       </body>
     </html>
-  );
+  )
 }

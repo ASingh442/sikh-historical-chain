@@ -12,7 +12,7 @@
     "@aws-sdk/client-lambda": "latest",
     "@aws-sdk/credential-providers": "latest",
     "@coinbase/wallet-mobile-sdk": "latest",
-    "@eslint/eslintrc": "latest",
+    "@eslint/eslintrc": "3.3.3",
     "@hookform/resolvers": "^3.10.0",
     "@mobile-wallet-protocol/client": "latest",
     "@nomicfoundation/hardhat-chai-matchers": "latest",
