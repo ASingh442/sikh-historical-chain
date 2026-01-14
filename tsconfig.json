@@ -13,17 +13,24 @@
     "skipLibCheck": true,
     "strict": true,
     "incremental": true,
+
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"],
-      "@/lib/*": ["lib/*"]
+      "@/*": ["*"]
     },
+
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": ["next-env.d.ts", "src", "components", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules", ".next"]
 }
